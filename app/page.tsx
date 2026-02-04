@@ -5,7 +5,7 @@ import FloatingActionButton from './src/components/FloatingActionButton';
 import Herosliderlayout from './src/components/Herosliderlayout';
 import Logo from './src/components/logo';
 import { AboutUsSection } from './src/components/AboutUsSection';
-import footer from './src/components/footer';
+import Footer from './src/components/Footer';
 
 
 export default function Page() {
@@ -17,7 +17,7 @@ export default function Page() {
       <Herosliderlayout />
       <FloatingActionButton />
       <AboutUsSection />
-      <footer />
+      <Footer />
       </>
   );
 }
