@@ -7,7 +7,6 @@ import Logo from './src/components/logo';
 import { AboutUsSection } from './src/components/AboutUsSection';
 import Footer from './src/components/Footer';
 
-
 export default function Page() {
   return (
       <> 

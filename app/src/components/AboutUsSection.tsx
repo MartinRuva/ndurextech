@@ -5,10 +5,12 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import CardActionArea from '@mui/material/CardActionArea';
+import Link from 'next/link';
 
 export function AboutUsSection() {
     return (
-        <section>
+       
+        <section id="about" className="py-10 bg-gradient-to-r from-gray-100 via-gray-200 to-gray-300 text-gray-800">
             <h1 style={{ textAlign: 'center', padding: '20px', fontWeight: 'bold' }}>
                 ABOUT US
             </h1>
@@ -63,6 +65,7 @@ export function AboutUsSection() {
                 </Card>
             </div>
         </section>
+      
     );
 }
 export default AboutUsSection;

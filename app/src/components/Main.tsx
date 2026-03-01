@@ -16,6 +16,8 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import BackgroundStyle from './Background';
 import Backgroundalignment from './Backgroundalignment';
+import Background from './Background';
+import Link from 'next/link';
 
 interface Props {
   /**
@@ -26,7 +28,11 @@ interface Props {
 }
 
 const drawerWidth = 240;
-const navItems = ['Home', 'About', 'Contact'];
+const navItems = [
+  { label: 'Home', href: '/' },
+  { label: 'About', href: '#about' },
+  { label: 'Contact', href: '#contact' },
+];
 
 export default function DrawerAppBar(props: Props) {
   const { window } = props;
@@ -37,19 +43,18 @@ export default function DrawerAppBar(props: Props) {
   };
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
-        MUI
+    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center', color: '#608ebc' }}>
+      <Typography variant="h6" sx={{ my: 2 , color: '#608ebc' }}>
+        <Background/>
+        Ndurex Tech
       </Typography>
       <Divider />
       <List>
         {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: 'center' }}>
-              <ListItemText primary={item} />
-            </ListItemButton>
-          </ListItem>
-        ))}
+  <Button key={item.label} sx={{ color: '#fff' }} component={Link} href={item.href}>
+    {item.label}
+  </Button>
+))}
       </List>
     </Box>
   );
@@ -79,10 +84,10 @@ export default function DrawerAppBar(props: Props) {
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
-              <Button key={item} sx={{ color: '#fff' }}>
-                {item}
-              </Button>
-            ))}
+  <Button key={item.label} sx={{ color: '#fff' }} component={Link} href={item.href}>
+    {item.label}
+  </Button>
+))}
           </Box>
         </Toolbar>
       </AppBar>

@@ -8,7 +8,7 @@ function FloatingActionButton() {
     <div>
     <Fab
       variant="extended"
-      href="https://wa.me/"
+      href="https://wa.me/26876909294"
       target="_blank"
       rel="noopener noreferrer"
       sx={{
