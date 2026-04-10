@@ -50,11 +50,16 @@ export default function DrawerAppBar(props: Props) {
       </Typography>
       <Divider />
       <List>
-        {navItems.map((item) => (
-  <Button key={item.label} sx={{ color: '#fff' }} component={Link} href={item.href}>
-    {item.label}
-  </Button>
-))}
+{navItems.map((item) => (
+  <ListItem key={item.label} disablePadding>
+    <ListItemButton
+      sx={{ textAlign: 'center' }}
+      onClick={(e) => handleNavClick(e as any, item.href)}
+    >
+      <ListItemText primary={item.label} />
+    </ListItemButton>
+  </ListItem>
+))}<br />
       </List>
     </Box>
   );
@@ -114,3 +119,7 @@ export default function DrawerAppBar(props: Props) {
     </Box>
   );
 }
+function handleNavClick(arg0: any, href: string): void {
+  throw new Error('Function not implemented.');
+}
+

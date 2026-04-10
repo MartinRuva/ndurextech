@@ -2,7 +2,7 @@ import "./herosectionstyling.css";
 
 function Herosection() {
     return (
-        <div className="w-full px-4 md:px-12 py-10 text-center md:text-left">
+        <div className="w-full px-4 md:px-12 py-10 text-center mx-auto max-w-screen-xl">
 
             {/* Main Heading */}
             <h1 className="montserrat-bold text-white text-3xl md:text-5xl font-bold tracking-tight leading-tight mb-6">
